@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Visualization Portfolio - [Your Name]</title>
+
+    <!-- Pico.css for clean, minimal styling -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+
+    <!-- Vega-Lite library for interactive visualizations -->
+    <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+
+    <style>
+        /* KSE Brand: Override Pico.css with official colors */
+        :root {
+            --pico-primary: rgb(0, 57, 100); /* KSE Dark Midnight Blue */
+            --pico-primary-hover: rgb(0, 77, 130);
+        }
+
+        /* KSE Typography */
+        body { line-height: 1.3; }
+        h1, h2, h3, h4, h5, h6 { line-height: 1.15; }
+
+        /* Visualization containers */
+        article > div { width: 100%; min-height: 400px; }
+    </style>
+</head>
+
+<body>
+    <main class="container">
+        
+        <!-- ============================================
+             GETTING STARTED - READ THIS FIRST!
+             ============================================
+
+             HOW TO USE THIS TEMPLATE:
+             1. Replace all [placeholder text] in square brackets with your content
+             2. Copy visualization sections to add more (you need minimum 5)
+             3. Test by opening this file in your browser
+             4. Delete instructional comments before submitting
+
+             📖 FOR COMPLETE REQUIREMENTS: See ASSIGNMENT.md
+
+             Quick checklist:
+             - Replace [Your Name], video link, and introduction theme
+             - Add 5+ visualizations with context, design decisions, insights, sources
+             - Include unified theme connecting all visualizations
+             - Embed your 5-7 minute video presentation link
+
+             ============================================ -->
+
+        <!-- ============================================
+             HEADER SECTION - Replace with your information
+             ============================================ -->
+        <hgroup>
+            <h1>Anhelina Popova</h1>
+            <p>Data Visualization Portfolio</p>
+            <p>Principles of Data Visualization | KSE | Fall 2025</p>
+        </hgroup>
+
+        <!-- ============================================
+             VIDEO PRESENTATION - Add your video link
+             Required: 5-7 minutes, covers theme + key visualizations
+             See ASSIGNMENT.md for detailed video requirements
+             ============================================ -->
+        <article>
+            <header>
+                <h2>📹 Video Presentation</h2>
+            </header>
+            <p>
+                <strong>Watch my portfolio walkthrough (5-7 minutes):</strong><br>
+                <a href="https://drive.google.com/file/d/18vucLVXw3G6ziZBfIa7uHx_W-3aUfbio/view?usp=sharing" target="_blank" role="button">
+                    ▶️ View Video Presentation
+                </a>
+            </p>
+        </article>
+
+        <!-- ============================================
+             INTRODUCTION - Explain your unified THEME (3-5 sentences)
+
+             Your theme should connect all visualizations around a common
+             question or domain. See ASSIGNMENT.md for examples.
+             ============================================ -->
+        <article>
+            <header>
+                <h2>Introduction</h2>
+            </header>
+            <p>
+                This project analyzes how the COVID-19 pandemic affected businesses worldwide, focusing on sales performance, employment, 
+                and business resilience. It explores how factors such as lockdown severity, business size, and government support policies 
+                influenced outcomes across countries. By combining business indicators with policy data, the project provides a clear, data-driven 
+                view of how government responses shaped business survival during the crisis.
+            </p>
+        </article>
+
+        <!-- ============================================
+             VISUALIZATION 1:
+             ============================================ -->
+        <article>
+            <header>
+                <h2>1. Sales Drop During COVID-19</h2>
+            </header>
+
+            <!-- CONTEXT & QUESTION (1-2 sentences) -->
+            <h3>How severe was the change in sales caused by COVID-19 across countries?</h3>
+            <p>
+                This visualization quantifies the magnitude of the sales drop 
+                shock across countries. By comparing survey sources, waves and countries simultaneously, it 
+                identifies where the change were most severe rather than assuming a uniform 
+                crisis. Moreover, filtering by income factor contributes to more profound understanding.
+                 This is analytically important because it gives a clear understanding 
+                that drives all subsequent analysis.
+            </p>
+
+            <!-- DESIGN DECISIONS (2-3 sentences) -->
+            <h3>Design Decisions</h3>
+            <p>
+                A stacked bar chart was chosen to efficiently compare change in sales across countries.
+                Color intensity encodes the wave of the COVID (Wave1, Wave2, Wave3). Fitering by region can define how exactly COVID effected sales across the world. 
+                A map was considered, but these declined for the reason of lack of despersion
+                that would be visible for the people eyes.  The tradeoff is reduced precision in reading exact values, which is presented through tooltips.
+
+            </p>
+
+            <!-- THE VISUALIZATION -->
+            <div style="border: 2px dashed #ccc; padding: 20px; text-align: center; margin: 20px 0;">
+               <div class='tableauPlaceholder' id='viz1766237135780' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Bo&#47;Book1_17661339793850&#47;SalesDrop&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='Book1_17661339793850&#47;SalesDrop' /><param name='tabs' value='yes' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Bo&#47;Book1_17661339793850&#47;SalesDrop&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1766237135780');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script> 
+            </div>
+
+            <!-- KEY INSIGHTS (2-3 sentences) -->
+            <h3>Key Insights</h3>
+            <p>
+                The first wave of COVID had the biggest effect on most countries, though the second one brought as well much of the drop. 
+                The third way hitted hard in the South Asia, resulted in almost half of the total effect. It can be examined that the most severe 
+                drops concentrated in parts of South Asia and in regions of Africa. Their bars appear to be the longest ones, indicating much larger average sales drop,
+                which suggests higher vulnerability to economic shocks and more limited capacity for firms to adapt or receive government support.
+                The economic impact of COVID-19 on firm sales was not uniform globall. Interesting, that upper- and lower middle-income countries experienced deeper and more widespread 
+                sales declines, wheras lower and high income ones were effected less. It can be explained by level of ability to adjust. Lower income countries, even in pre-COVID world were not having
+                much of the sales turn over, on the contrast high income ones were just more resilient and were able to quickly impose some regulations.
+            </p>
+
+            <!-- DATA SOURCE -->
+            <footer>
+                <strong>Data Source:</strong>
+                COVID-19 Business Pulse Surveys, World Bank (WB), 2020-2021, <a href="https://www.worldbank.org/en/data/interactive/2021/01/19/covid-19-business-pulse-survey-dashboard" target="_blank">Посилання</a>
+            </footer>
+        </article>
+
+        <!-- ============================================
+             VISUALIZATION 2:
+             ============================================ -->
+        <article>
+            <header>
+                <h2>2.Lockdown Stringency and Business Resilience Across Countries</h2>
+            </header>
+
+            <h3>Did stricter lockdowns necessarily lead to worse business outcomes?</h3>
+            <p>
+            This visualization explores the relationship between government COVID-19 containment measures and business resilience across countries.
+            It compares average lockdown stringency levels with average changes in business sales during a given survey wave, highlighting how policy 
+            severity and economic structure interacted during the pandemic.
+            </p>
+
+            <h3>Design Decisions</h3>
+            <p>
+                A scatter plot was selected to examine the relationship between lockdown stringency and business sales changes, 
+                as it effectively reveals cross-country patterns and correlation. Position encodes stringency and sales change, 
+                while color represents income groups and bubble size reflects GDP per capita, adding structural context. 
+                This approach preserves country-level detail and analytical depth, with the tradeoff 
+                of higher visual complexity compared to simpler aggregated charts.
+            </p>
+
+            <div style="border: 2px dashed #ccc; text-align: center; margin: 20px 0;">
+                <div class='tableauPlaceholder' id='viz1766238582685' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Bo&#47;Book1_17661339793850&#47;Resilience&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='Book1_17661339793850&#47;Resilience' /><param name='tabs' value='yes' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Bo&#47;Book1_17661339793850&#47;Resilience&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1766238582685');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>    
+            </div>
+                
+            <h3>Key Insights</h3>
+            <p>
+                There is a clear correlation between change in sales and lockdowns stringency and it`s mostly visible during the firs wave of COVID. 
+                Countries that position in the top squares are the most resilient ones. It makes sence as there are mostly countries with high ot upper middle income add
+                high GDP per capita score. The country with the least changes in sales turned out to be Argentina and  Sri Lanka is the countri with the biggest drop in sales.
+                Intresting that countries with low income are consentrated in the center of the graph. The most vulnerable countries are in the left bottom squre. Most of 
+                them are countrie with low or lower middle income. Only one country - Italy - with high income is there. That can be a sign that Italy was severly affected 
+                by stringencies and faced a harsh drop.
+                </thead>
+            </p>
+
+            <footer>
+                <strong>Data Source:</strong>
+                COVID-19 Business Pulse Surveys, World Bank (WB), 2020-2021, <a href="https://www.worldbank.org/en/data/interactive/2021/01/19/covid-19-business-pulse-survey-dashboard" target="_blank">Посилання</a>
+            </footer>
+        </article>
+
+        <!-- ============================================
+             VISUALIZATION 3:
+             ============================================ -->
+        <article>
+            <header>
+                <h2>3. Business Size as a Buffer Against COVID-19 Sales Losses</h2>
+            </header>
+
+            <h3>How does the variability and risk of extreme sales losses differ depening on the size of the firm and it`s income?</h3>
+            <p>
+                This visualization asks whether larger businesses experienced smaller COVID-19 related sales losses than smaller firms, 
+                and how this relationship varies across country income groups. The question matters because it informs policy on which 
+                firm types are most vulnerable to shocks and where targeted support by government would be most effective.
+            </p>
+
+            <h3>Design Decisions</h3>
+            <p>
+                A faceted box and whisker plot was chosen to compare distributions of sales changes across business sizes while allowing
+                clear separation by income group. Position on the y-axis encodes the magnitude of sales change, color distinguishes income
+                categories. Reference lines are used to give a visual concept of averages across all distributions. Alternatives such as bar 
+                charts or line charts were considered, but they would not show distributional spread and outliers; this approach balances detail 
+                and comparability, though it trades some simplicity for visual density.
+            </p>
+
+            <div style="border: 2px dashed #ccc; text-align: center; margin: 20px 0;">
+                <div class='tableauPlaceholder' id='viz1766238621025' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Bo&#47;Book1_17661339793850&#47;SizeasaBuffer&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='Book1_17661339793850&#47;SizeasaBuffer' /><param name='tabs' value='yes' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Bo&#47;Book1_17661339793850&#47;SizeasaBuffer&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1766238621025');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+            </div>
+
+            <h3>Key Insights</h3>
+            <p>
+                Across all income groups, larger firms tend to experience smaller average sales declines, 
+                while micro and small firms suffer deeper and more harsh losses. This buffering effect of size is strongest in high-income 
+                economies, where large firms cluster closer to zero change and show relatively tight distributions, suggesting greater resilience 
+                and stability during the shock. But, the outliers can be detected such as South Africa - country of uper middle income group, but has faced severe drop in sales.
+                In contrast, lower-middle and low income groups show much wider spreads, especially for micro and 
+                small firms, with several extreme outliers. Even when averages are similar, smaller firms face 
+                higher downside risk, as shown by longer lower tails and more negative outliers. 
+            </p>
+
+            <footer>
+                <strong>Data Source:</strong>
+                COVID-19 Business Pulse Surveys, World Bank (WB), 2020-2021, <a href="https://www.worldbank.org/en/data/interactive/2021/01/19/covid-19-business-pulse-survey-dashboard" target="_blank">Посилання</a>
+            </footer>
+        </article>
+
+        <!-- ============================================
+             VISUALIZATION 4: 
+             ============================================ -->
+        <article>
+            <header>
+                <h2>4. Government policies imposed on businesses (COVID-19)</h2>
+            </header>
+
+            <h3> How the policies differ accross the world and during what wave they were the biggest?</h3>
+            <p>
+                This visualization examines how recovery policies, such as cash transfers, payments deferrals, access to credit, tax reduction and wage subsidies
+                were distributed across countries during the COVID-19 period, taking into account whether the share of sales drop has an influence or is it something else.
+                It addresses whether government support was implemented evenly worldwide and highlights cross-country differences in policy intensity, which is crucial for understanding unequal recovery paths. 
+            </p>
+
+            <h3>Design Decisions</h3>
+            <p>
+                A filled map was selected to display the global distribution of recovery policies, as geographic context is essential for comparing national 
+                responses. Color intensity encodes the magnitude of policy implementation, allowing quick identification of countries with stronger or weaker 
+                support, while filters enable comparison across waves and policy types. Alternative charts such as bar charts or tables were considered but 
+                rejected because they preventing spatial patterns; the map`s strength lies in its intuitive global overview, with the tradeoff of reduced precision 
+                for exact value comparisons.
+            </p>
+
+            <div style="border: 2px dashed #ccc; text-align: center; margin: 20px 0;">
+                <div class='tableauPlaceholder' id='viz1766238705767' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Bo&#47;Book1_17661339793850&#47;Recoverypolicies&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='path' value='views&#47;Book1_17661339793850&#47;Recoverypolicies?:language=en-US&amp;:embed=true&amp;:sid=&amp;:redirect=auth' /> <param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Bo&#47;Book1_17661339793850&#47;Recoverypolicies&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1766238705767');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+            </div>
+
+            <h3>Key Insights</h3>
+            <p>
+                Divergency of imposing policies across countries suggests that there are some factors that might result in it. East Europe region almost always experienced 
+                big policy impact (positive), suggesting that there might be a factor of economic development. Quite low imapact of policies was made in South Africa and Sub-Sahara
+                Africa regions, as well as some countries in Latin America. Again, it can be explained by economic developmentof these countries. Sales drop facor didn`t quite show
+                any dependency on the level of magnitude of the policies. By cash transfers policie, Poland holds the gold, though, its change in sales wasn`t that big, compered to others.
+                Most of countries have imposed their policies  duraing the firs wave. Less during the second one (mostly East Europe, South Africa and South Asia), and even
+                less during the third one (some in East Europe, one or two in Latin America and some in South Africa). That can suggest, that during the first harsh wave businesses
+                started to slowly adjust and recovering.
+            </p>
+
+            <footer>
+                <strong>Data Source:</strong>
+                COVID-19 Business Pulse Surveys, World Bank (WB), 2020-2021, <a href="https://www.worldbank.org/en/data/interactive/2021/01/19/covid-19-business-pulse-survey-dashboard" target="_blank">Посилання</a>
+            </footer>
+        </article>
+
+        <!-- ============================================
+             VISUALIZATION 5:
+             ============================================ -->
+        <article>
+            <header>
+                <h2>5. Amount of fired workers and the government responces</h2>
+            </header>
+
+            <h3>Did government policies correlated with the amount of fired workers</h3>
+
+            <p>This visualization explores how the intensity of selected government policies relates to the number of workers 
+                laid off over time. The key question is whether stronger policy interventions coincide with reductions in layoffs,
+                helping assess the effectiveness of COVID-era business support measures.
+            </p>
+
+            <h3>Design Decisions</h3>
+            <p>A bar-line chart was chosen to compare layoffs (bars) with policy intensity (line) across months, as both variables evolve 
+                over the same time period. Position along the x-axis encodes time, bar height represents the number of fired workers, 
+                and the line encodes the selected policy value, with color used to clearly distinguish the two measures. A scatter plot was 
+                considered for correlation analysis, but this approach was preferred because it preserves 
+                temporal structure and supports narrative comparison. The tradeoff is that it suggests association rather than providing a formal measure of correlation.
+            </p>
+
+            <!-- Add your visualization here (copy from examples above) -->
+            <div style="border: 2px dashed #ccc; text-align: center; margin: 20px 0;">
+                <div class='tableauPlaceholder' id='viz1766239976474' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Bo&#47;Book1_17661339793850&#47;PolicyVSFired_workers&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='path' value='views&#47;Book1_17661339793850&#47;PolicyVSFired_workers?:language=en-US&amp;:embed=true&amp;:sid=&amp;:redirect=auth' /> <param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Bo&#47;Book1_17661339793850&#47;PolicyVSFired_workers&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1766239976474');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+            </div>
+
+            <h3>Key Insights</h3>
+            <p>The hit of laidoff workers during the first wave falls on June, with the amount of almost 25k. All of the following waves as well had a great amount, but
+                not as big as during the first one. Observed government policies (wage subsidies, tax reduction, access to credit and payments deferrals) have shown a coincide
+                responces. With more paid workers reduction the bigger imposing was, suggesting the government assessment during COVID. 
+             </p>
+
+            <footer>
+                <strong>Data Source:</strong>
+                COVID-19 Business Pulse Surveys, World Bank (WB), 2020-2021, <a href="https://www.worldbank.org/en/data/interactive/2021/01/19/covid-19-business-pulse-survey-dashboard" target="_blank">Посилання</a>
+            </footer>
+        </article>
+
+
+        <!-- ============================================
+             FOOTER
+             ============================================ -->
+        <footer style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid #ddd;">
+            <p>Created by Anhelina Popova | Principles of Data Visualization | KSE Fall 2025</p>
+            <p>Last updated: 20th December 2025</p>
+        </footer>
+
+    </main>
+
+    <!-- ============================================
+         BEFORE SUBMITTING:
+
+         ✓ All [placeholders] replaced with your content
+         ✓ Minimum 5 visualizations included
+         ✓ Video link working and embedded
+         ✓ Introduction explains unified theme (3-5 sentences)
+         ✓ Each viz has: Context, Design, Insights, Source
+         ✓ ZIP named: Portfolio_[LastName]_[FirstName].zip
+         ✓ All datasets and AI documentation included in ZIP
+
+         📋 Complete checklist in ASSIGNMENT.md
+
+         DELETE THIS COMMENT BLOCK BEFORE SUBMITTING!
+         ============================================ -->
+
+</body>
+</html>
